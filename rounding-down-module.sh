@@ -1,5 +1,4 @@
 #!bin/bash
-#Rounding down script, free for use
 #Rounds numbers down to whatever decimals you want
 #bveldhuyzen [at] gmail dot com
 #2021
