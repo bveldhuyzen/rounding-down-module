@@ -1,6 +1,6 @@
 #!bin/bash
 #Rounding down script, free for use
-#Rounds numbers down to whatever floor you want
+#Rounds numbers down to whatever decimal floor you want
 #bveldhuyzen [at] gmail dot com
 #2021
 
