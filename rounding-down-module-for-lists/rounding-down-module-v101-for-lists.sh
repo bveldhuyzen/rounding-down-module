@@ -10,7 +10,7 @@
 #The script works as followed:
 #
 #1. The numerical value (from list) that is to be rounded down becomes a variable; this is called the FULL_NUMBER // see line 26
-#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) this specified numerical value (decimal(s)) // see line 32-33
+#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) specified decimal(s) // see line 32-33
 #3. Of the numerical value [1] is obtained its integer, for which a new variable is created
 #4. Of the numerical value [1] are obtained the decimals, for which a new variable is created
 #5. A multiplication factor is generated; how many times does [2] fit into [4]
