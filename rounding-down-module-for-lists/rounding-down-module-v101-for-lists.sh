@@ -9,14 +9,15 @@
 #
 #The script works as followed:
 #
-#1. The numerical value (from list) that is to be rounded down becomes a variable; this is called the FULL_NUMBER // see line 26
-#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) specified decimal(s) // see line 32-33
+#1. The numerical value (from list) that is to be rounded down becomes a variable; this is called the FULL_NUMBER // see line 27
+#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) specified decimal(s) // see line 33-34
 #3. Of the numerical value [1] is obtained its integer, for which a new variable is created
 #4. Of the numerical value [1] are obtained the decimals, for which a new variable is created
 #5. A multiplication factor is generated; how many times does [2] fit into [4]
-#6. The numerical value to round down to at [2] is multiplied by the multiplication factor of [5], resulting in a new (decimal) numerical value that is rounded down to [2]
-#7. And so we can add up: INTEGER + NEW_DECIMALS = ROUNDED_NUMBER
-#8. ROUNDED_NUMBER is then logged into a text file
+#6. If the multiplication factor is not a whole number, then the multiplication factor is its integer
+#7. The numerical value to round down to at [2] is multiplied by the multiplication factor of [5], resulting in a new (decimal) numerical value that is rounded down to [2]
+#8. And so we can add up: INTEGER + NEW_DECIMALS = ROUNDED_NUMBER
+#9. ROUNDED_NUMBER is then logged into a text file
 #
 #All steps/significances are logged into temporary text files for validation purposes
 
@@ -26,7 +27,7 @@
 FULL_NUMBER=$(<full_number_1.txt)
 
 #[2]
-###echo the decimals to which the module has to round down to at line 32
+###echo the decimals to which the module has to round down to at line 33
 #e.g. 0.05 will make the module round down to the nearest (multiple of) 0.05.
 #e.g. 1.890024 will then be rounded down to 1.85
 echo "0.020" > round_to_this.txt
@@ -47,15 +48,16 @@ DECIMALS=$(<leftover_decimals.txt)
 calc -d "$DECIMALS / $ROUND_TO_THIS" > MULTIPLICATION_FACTOR.txt
 MULTIPLICATION_FACTOR=$(<MULTIPLICATION_FACTOR.txt)
 
+#[6]
 echo $MULTIPLICATION_FACTOR | awk '{print int($0)}' > MULTIPLICATION_FACTOR_total.txt
 MULTIPLICATION_FACTOR_TOTAL=$(<MULTIPLICATION_FACTOR_total.txt)
 
-#[6]
+#[7]
 #rounding of some sort  
 calc -d "$MULTIPLICATION_FACTOR_TOTAL * $ROUND_TO_THIS" > new_decimals.txt
 NEW_DECIMALS=$(<new_decimals.txt)
 
-#[7]
+#[8]
 #new rounded number
 calc -d "$INTEGER + $NEW_DECIMALS" > rounded_number.txt
 cat rounded_number.txt
