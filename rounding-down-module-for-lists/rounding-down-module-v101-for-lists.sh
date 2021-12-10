@@ -63,6 +63,7 @@ calc -d "$INTEGER + $NEW_DECIMALS" > rounded_number.txt
 cat rounded_number.txt
 ROUNDED_NUMBER=$(<rounded_number.txt)
 
+#[9]
 #you may for example store the rounded number in a file of choice to create a list, e.g.
 #
 touch LIST_DATE_TEST.txt
