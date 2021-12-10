@@ -20,7 +20,7 @@
 #All steps/significances are logged into temporary text files for validation purposes
 
 #[1]
-###echo the number that has to be rounded down at line 26
+###echo the number that has to be rounded down at line 25
 #e.g. 10, 10.01, 10.10, 1050.11493759834, or whatever
 echo "0.4687576465476" > full_number_1.txt
 FULL_NUMBER=$(<full_number_1.txt)
