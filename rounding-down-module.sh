@@ -10,11 +10,11 @@
 #Furthermore, the script works as followed:
 #
 #1. The numerical value (any number) that is to be rounded down is obtained; this is called the FULL_NUMBER // see line 25-26
-#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) this specified numerical value (decimal(s)) // see line 36-37
+#2. The numerical value (decimal(s)) to which [1] has to be rounded down to is obtained; the module will round down to the nearest (multiple of) specified decimal(s) // see line 36-37
 #3. Of the numerical value [1] is obtained its integer, for which a new variable is created
 #4. Of the numerical value [1] are obtained the decimals, for which a new variable is created
 #5. A multiplication factor is generated; how many times does [2] fit into [4]
-#6. The numerical value to round down to at [2] is multiplied by the multiplication factor of [5], resulting in a new decimal numerical value that is rounded down to [2]. 
+#6. The numerical value to round down to at [2] is multiplied by the multiplication factor of [5], resulting in a new (decimal) numerical value that is rounded down to [2]. 
 #7. The numerical value at [6] is now rounded down to the nearest (multiple of) specified decimals at [2]. And so we can add up: INTEGER + NEW_DECIMALS = ROUNDED_NUMBER
 #
 #All steps/significances are logged into temporary text files for validation purposes
