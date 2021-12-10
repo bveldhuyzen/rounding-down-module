@@ -26,7 +26,7 @@
 FULL_NUMBER=$(<full_number_1.txt)
 
 #[2]
-###echo the decimals to which the module has to round down to
+###echo the decimals to which the module has to round down to at line 32
 #e.g. 0.05 will make the module round down to the nearest (multiple of) 0.05.
 #e.g. 1.890024 will then be rounded down to 1.85
 echo "0.020" > round_to_this.txt
