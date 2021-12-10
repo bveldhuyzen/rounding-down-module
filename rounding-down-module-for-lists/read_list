@@ -7,7 +7,6 @@
 #after configuring the rounding-down-module-for-lists, run this file via bash read_list, and the rest is automated
 #
 
-
 input="list.txt"
 while IFS= read -r line
 do
