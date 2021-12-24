@@ -13,8 +13,8 @@
 #2. The decimals to which [1] has to be rounded down to are obtained; the module will round down to the nearest (multiple of) these specified decimals // see line 25
 #3. A multiplication factor is generated; how many times does [2] fit into [1]
 #4. In case the multiplication factor is not a whole number, the multiplication factor will be its integer
-#5. The numerical value to round down to at [2] is multiplied by the multiplication factor of [3], resulting in a new numerical value that is rounded down to [2]
-#6. ROUNDED_NUMBER is then logged into a text file
+#5. The decimals to round down to at [2] is multiplied by the multiplication factor of [3], resulting in a new number that is rounded down to [2]
+#6. ROUNDED_DOWN_NUMBER is then logged into a text file
 #
 #
 #All steps/significances are logged into temporary text files for validation purposes
