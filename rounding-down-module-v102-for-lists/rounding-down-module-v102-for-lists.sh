@@ -37,7 +37,6 @@ ROUNDED_DOWN_NUMBER=$(<rounded_down_number.txt)
 
 #you may for example store the rounded number in a file of choice to create a list, e.g.
 #
-bash -c "[ -d LIST_DATE_TEST.txt ] && rm LIST_DATE_TEST.txt"
 touch LIST_DATE_TEST.txt
 echo "$ROUNDED_DOWN_NUMBER" >> LIST_DATE_TEST.txt
 #
